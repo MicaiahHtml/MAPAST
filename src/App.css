@@ -3,10 +3,11 @@
   /* margin: 0 auto; */
   /* padding: 2rem; */
   --back: brown;
+  --bImg: url('./assets/clouds-featured.webp');
   text-align: center;
 }
 
-.NewsArticle{
+.NewsArticle {
   position: absolute;
   padding: 3em;
   border-radius: 20px;
@@ -18,7 +19,7 @@
   width: 50%;
   height: 50%;
 }
-.CloseButtonContainer{
+.CloseButtonContainer {
   position: absolute;
   /* text-align: right; */
   top: 0;
@@ -30,19 +31,49 @@
   background-color: brown;
 }
 
-.greyout{
+.greyout {
   position: absolute;
   top: 0px;
+  left: 0px;
   background-color: rgba(128, 128, 128, 0.438);
   width: 100vw;
   height: 100vh;
 }
-.mainBox{
-  /* margin: 0px; */
-  width: 100%;
-  background-color: var(--back);
+.mainBox {
+  /* padding: 10px; */
+  box-sizing: border-box;
+  height: 100%;
+  /* background: var(--back); */
+  background: var(--bImg);
+  /* background-size: cover; */
+  animation: backgroundScroll 60s linear 1s infinite;
+  border: 5vw ridge black;
 }
 
+.mainBox #title {
+  font-family: 'Shizuru';
+  font-size: 3em;
+  padding: 1em;
+}
 /* .WorldMap{
   background-color: none;
 } */
+.innerContent{
+  display: flex;
+  align-items: center;
+}
+
+#instructions {
+  /* flex-grow: 1; */
+  flex-basis: 20%;
+  margin-left: 5%;
+}
+
+.FlagImage {
+  flex-basis: 20%;
+  width: 20%;
+  height: 20%;
+  border: 10px outset #3e3e3e42;
+  border-radius: 50%;
+  margin-left: 5%;
+}

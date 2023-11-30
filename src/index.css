@@ -13,19 +13,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Shizuru';
+  src: local('Shizuru'), url(./assets/fonts/Shizuru-Regular.ttf) format('truetype');
+}
+
+@keyframes backgroundScroll {
+  0% { background-position: 50% 50%; }
+  33% { background-position: 1% 50%; }
+  40% { background-position: 1% 50%; }
+  66% { background-position: 99% 50%; }
+  75% { background-position: 99% 50%; }
+  100% { background-position: 50% 50%; }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
 body {
+  display: grid;
   margin: 0;
-  /* display: flex;
-  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }

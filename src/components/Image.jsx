@@ -1,5 +1,10 @@
-export default function Image(props){
-    return(
-        <image src = { props.url }/>
-    )
+export default function FlagImage(props){
+    if(props.src !== "") { 
+        return( 
+            <img 
+            className = "FlagImage" 
+            src = { props.src }
+            onClick = { props.onClickFunction }/> 
+            ) 
+        }
 }

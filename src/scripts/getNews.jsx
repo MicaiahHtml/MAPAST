@@ -4,7 +4,7 @@
 
 
 
-const getNews = async( countryCode, apiKey, countryName ) => {
+const getNews = async( countryName, countryCode, apiKey ) => {
     try{
         // make fetch request and store response
         const url = 'https://api.currentsapi.services/v1/latest-news?' +
