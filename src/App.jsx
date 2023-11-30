@@ -16,6 +16,9 @@ function App() {
   const [curImageIndex, setCurImageIndex] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   
+  const controller = new AbortController();
+  const { signal } = controller;
+
   const apiKey = ["rR0xMXUAKE2U8MRi9uCrJA0eFzOO0MO2pWp6oasiD62rQ_IY", "Zzvept4l0H9lBQMoUjzwHg7cN4YND0Ia"];
   //console.log(data);
   
@@ -24,10 +27,12 @@ function App() {
     //alert(curCtry.iso);
     if(isClicked){
       const fetchExpire = setTimeout(()=>{
-        setCurArticle({title: String("Nothing found..."), body: String("It's kinda quiet in " + curCtry.cName + "...")})
+        controller.abort();
+        setCurArticle({title: String("Nothing found..."), body: String("It's kinda quiet here in " + curCtry.cName + "...")})
+        
       }, 10000);
       console.log(fetchExpire);
-      getNews(curCtry.cName, curCtry.iso, apiKey[0]).then((t) => {
+      getNews(curCtry.cName, curCtry.iso, apiKey[0], { signal }).then((t) => {
         setCurArticle({title: String(t.title), body: String(t.description)});
         clearTimeout(fetchExpire);
         });
@@ -61,7 +66,7 @@ function App() {
     <div className = "mainBox">
      <h1 id = "title">MAPAST!</h1>
      <div className="innerContent">
-      <p id = "instructions">Click on a country to get the latest news article.</p>
+      <p id = "instructions">Click on a country to get its latest news. It might take a moment to load; feel free to click on the gif to the right while it does 🙂</p>
       <WorldMap
           className = "WorldMap"
           backgroundColor='transparent'
