@@ -46,8 +46,8 @@
   /* background: var(--back); */
   background: var(--bImg);
   /* background-size: cover; */
-  animation: backgroundScroll 60s linear 1s infinite;
-  border: 5vw ridge black;
+  animation: fadeIn 5s linear 1s 1, backgroundScroll 60s linear 1s infinite;
+  border: 5vw ridge #7681bc;
 }
 
 .mainBox #title {
@@ -67,6 +67,7 @@
   /* flex-grow: 1; */
   flex-basis: 20%;
   margin-left: 5%;
+  font-family: monospace;
 }
 
 .FlagImage {

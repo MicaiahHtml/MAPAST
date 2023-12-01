@@ -27,6 +27,12 @@
   100% { background-position: 50% 50%; }
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;

@@ -13,7 +13,7 @@ function App() {
   const [curArticle, setCurArticle] = useState({title: "", body: ""});
   const [curData, setCurData] = useState([]);
   const [curImage, setCurImage] = useState("");
-  const [curImageIndex, setCurImageIndex] = useState(0);
+  const [curImageIndex, setCurImageIndex] = useState(1);
   const [isClicked, setIsClicked] = useState(false);
   
   const controller = new AbortController();
