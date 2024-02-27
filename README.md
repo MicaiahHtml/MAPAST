@@ -1,4 +1,6 @@
 # PERSCHOLAS 2023 MOD 2 FINAL
+https://main--fantastic-syrniki-8ae6f7.netlify.app/ 
+
 ![mapast front page](MAPAST2.jpg)
 ## Description
 MAPAST! is a simple global news page where you can click anywhere on the map and get the latest globally available news from that region. Interact with both the map and the gif to get results.
